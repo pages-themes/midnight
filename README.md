@@ -1,4 +1,4 @@
-# Midnight `jekyll-theme-midnight` gem
+# `jekyll-theme-midnight` gem
 
 Midnight is a Jekyll theme for [GitHub Pages](https://pages.github.com).
 
