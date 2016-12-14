@@ -1,6 +1,6 @@
 # The Midnight theme
 
-[![Build Status](https://travis-ci.org/pages-themes/jekyll-theme-midnight.svg?branch=master)](https://travis-ci.org/pages-themes/jekyll-theme-midnight) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-midnight.svg)](https://badge.fury.io/rb/jekyll-theme-midnight)
+[![Build Status](https://travis-ci.org/pages-themes/midnight.svg?branch=master)](https://travis-ci.org/pages-themes/midnight) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-midnight.svg)](https://badge.fury.io/rb/jekyll-theme-midnight)
 
 *Midnight is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/midnight), or even [use it today](#usage).*
 
