@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name          = "jekyll-theme-midnight"
-  s.version       = "0.0.4"
+  s.version       = "0.1.0"
   s.license       = "CC0-1.0"
   s.authors       = ["Matt Graham", "GitHub, Inc."]
   s.email         = ["opensource+jekyll-theme-midnight@github.com"]
