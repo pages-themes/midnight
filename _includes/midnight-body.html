@@ -1,0 +1,18 @@
+<body>
+  {% include midnight-header.html %}
+
+  <div class="wrapper">
+
+    <section>
+      {% include midnight-title.html %}
+
+      {{ content }}
+
+    </section>
+
+  </div>
+
+  {% if site.google_analytics %}
+    {% include midnight-analytics.html %}
+  {% endif %}
+</body>
