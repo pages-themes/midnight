@@ -10,7 +10,7 @@ body {
   font-weight: normal;
   background: #252525;
   background-attachment: fixed !important;
-  background: linear_gradient(#2a2a29, #1c1c1c);
+  background: linear-gradient(#2a2a29, #1c1c1c);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -185,7 +185,7 @@ dt {
       a {
         color: white;
         border: 1px solid #5d910b;
-        background: linear_gradient(#93bd20, #659e10);
+        background: linear-gradient(#93bd20, #659e10);
         border-radius: 2px;
         box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
 
@@ -198,7 +198,7 @@ dt {
         text-align:center;
 
         &:hover {
-          background: linear_gradient(#749619, #527f0e);
+          background: linear-gradient(#749619, #527f0e);
           background-color: #659e10;
           border: 1px solid #527f0e;
           box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
