@@ -172,53 +172,59 @@ dt {
     background: blue;
     margin: 6px auto;
 
-    li {
-      font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      list-style: none;
-      display: inline;
-      color: white;
-      line-height: 50px;
-      text-shadow: 0px 1px 0px rgba(0,0,0,.2);
-      font-size: 14px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
 
-      a {
+      li {
+        font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        list-style: none;
+        display: inline;
         color: white;
-        border: 1px solid #5d910b;
-        background: linear-gradient(#93bd20, #659e10);
-        border-radius: 2px;
-        box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
+        line-height: 50px;
+        text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+        font-size: 14px;
 
-        background-color: #93bd20;
-        padding: 10px 12px;
-        margin-top: 6px;
-        line-height:14px;
-        font-size:14px;
-        display:inline-block;
-        text-align:center;
+        a {
+          color: white;
+          border: 1px solid #5d910b;
+          background: linear-gradient(#93bd20, #659e10);
+          border-radius: 2px;
+          box-shadow: inset 0px 1px 0px rgba(255,255,255,.3), 0px 3px 7px rgba(0,0,0,.7);
 
-        &:hover {
-          background: linear-gradient(#749619, #527f0e);
-          background-color: #659e10;
-          border: 1px solid #527f0e;
-          box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
+          background-color: #93bd20;
+          padding: 10px 12px;
+          margin-top: 6px;
+          line-height:14px;
+          font-size:14px;
+          display:inline-block;
+          text-align:center;
+
+          &:hover {
+            background: linear-gradient(#749619, #527f0e);
+            background-color: #659e10;
+            border: 1px solid #527f0e;
+            box-shadow: inset 0px 1px 1px rgba(0,0,0,.2), 0px 1px 0px rgba(0,0,0,.0);
+          }
         }
-      }
 
-      &.fork {
-        float: left;
-        margin-left: 0px;
-      }
+        &.fork {
+          float: left;
+          margin-left: 0px;
+        }
 
-      &.downloads {
-        float: right;
-        margin-left: 6px;
-      }
+        &.downloads {
+          float: right;
+          margin-left: 6px;
+        }
 
-      &.title {
-        float: right;
-        margin-right: 10px;
-        font-size: 11px;
+        &.title {
+          float: right;
+          margin-right: 10px;
+          font-size: 11px;
+        }
       }
     }
   }
