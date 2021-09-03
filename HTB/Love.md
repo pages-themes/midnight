@@ -1,5 +1,5 @@
 ---
-title: Hack The Box: Love
+site.title: Hack The Box: Love
 permalink: /HTB/Love
 layout: default
 ---
