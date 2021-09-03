@@ -30,8 +30,10 @@
       </div><!-- end header -->
 
     <div class="wrapper">
-
       <section>
+          <div id="title">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+    </div>
       {{ content }}
       <br />
       <hr>
