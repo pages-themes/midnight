@@ -1,5 +1,6 @@
 ---
 layout: default
+title: HackTheBox Directory
 ---
 This is where I have my HackTheBoxes writeups/walkthroughs.
 <br />
