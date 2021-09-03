@@ -71,4 +71,14 @@ Now lets check if our payload is there.
 ![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/love%20(15).png?raw=true) 
 <br />
 <br />
-Robux op. Before we run this, we have to remember that we're using a bind shell so we have to connect to the listener that will be active once we run our payload.
+Robux op. Before we run this, we have to remember that we're using a bind shell so we have to connect to the listener that will be active once we run our payload. This can be done through metasploit and running the exploit `multi/handler` and setting our respective `LHOST` and `LPORT`.
+<br />
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/love%20(17).png?raw=true) 
+<br />
+<br />
+Now lets run the msi file on the compromised host (we can just type out the filename and extension if its in our directory, or write the full path). 
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/love%20(16).png?raw=true) 
+<br />
+<br />
+ggez
+-Dylan Tran 9/3/2021
