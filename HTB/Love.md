@@ -3,7 +3,7 @@ title: Hack The Box&#58; Love
 permalink: /HTB/Love
 layout: default
 ---
-# Love Writeup 
+
 Love is an easy level box on HackTheBox and took quite some time for me to solve as it was the second box that I have tried to solve. It was pretty interesting to solve and I learned some new exploit methods that I could try to use later.
 
 # Walkthrough
