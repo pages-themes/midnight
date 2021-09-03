@@ -1,3 +1,4 @@
 show_downloads: true
 google_analytics:
+title: Home
 theme: jekyll-theme-midnight
