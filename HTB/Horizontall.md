@@ -316,3 +316,4 @@ Last login: Sat Sep  4 07:15:53 2021 from 10.10.14.151
 ```
 Now we can access the thing being hosted on the victim's port 8000, on our port 80. A quick nmap scan of our local machine tells me that its an http service, and since we port forwarded, we can access it from our attacking machine. So enter `http://127.0.0.1:80` on your web browser.
 ![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(5).PNG?raw=true) 
+Let's see if theres an exploit for this Laravel thing. It's important to note that it's running v8, so if we find an exploit, we have to make sure the versions match.
