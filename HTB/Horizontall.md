@@ -50,7 +50,28 @@ Nmap done: 1 IP address (1 host up) scanned in 14.16 seconds
 ```
 Nothing really sticks out to me except the domain under the port 80 scan so I'm just going to try to access the web server on port 80. I'm going to add the domain to my `/etc/hosts` file first so I can actually access it, because, based on this scan, the domain wasn't accessible yet. Just run the command `nano /etc/hosts` as root and add `<ip> horizontall.htb` to it.
 
-# --add horizontall image here
-
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall.PNG?raw=true) 
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(1).PNG?raw=true) 
 Now nothing really stuck out to me when I actually accessed the website. There was an input box but the submission button did nothing. I tried enumerating some directories with gobuster and those didn't give me any significant findings. So now I'm going to try to search for any subdomains using gobuster. I ran
-`gobuster vhost -w /<path to wordlist> -u horizontall.htb` and I got the result
+`gobuster vhost -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u horizontall.htb` and I got the result
+```markdown
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:          http://horizontall.htb
+[+] Method:       GET
+[+] Threads:      10
+[+] Wordlist:     /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+[+] User Agent:   gobuster/3.1.0
+[+] Timeout:      10s
+===============================================================
+2021/09/03 20:03:54 Starting gobuster in VHOST enumeration mode
+===============================================================
+Found: api-prod.horizontall.htb (Status: 200) [Size: 413]
+                                                         
+===============================================================
+2021/09/04 00:16:24 Finished
+===============================================================
+```
+So now we see a subdomain. Lets access it by first adding the domain and the ip address into the `/etc/hosts` file like we did with the domain `horizontall.htb`. After accessing, I see something very interesting.
