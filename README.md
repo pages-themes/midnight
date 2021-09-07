@@ -1,3 +1,5 @@
-This my blog. Dylan Tran's
+This my blog. Dylan Tran's.
+<br />
 Join Swift.
+<br />
 Also read this: https://nosecurity.blog
