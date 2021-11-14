@@ -21,7 +21,9 @@
       <div id="header">
         <nav>
           <ul>
+            {% if site.github.is_project_page %}
             <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
+            {% endif %}
             {% if site.show_downloads %}
               <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
               <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
