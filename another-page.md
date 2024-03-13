@@ -2,8 +2,6 @@
 layout: default
 ---
 
-## Welcome to another page
+## Easter Egg!?!?!????!?!?!?!
 
-_yay_
-
-[back](./)
+Wow, you caught an easter egg. Congrats!
