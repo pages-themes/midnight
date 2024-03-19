@@ -29,5 +29,7 @@ they/them ♦ asexual
 * **📨 Address** You can meet me IRL at `Planet Earth, Solar System, Milky Way, Observable Universe, Universe`!
 
 ## 
-there is an easter egg in this site, find it and I may reveal my 💀 sketches and stories
+[Send a pull request](https://docs.github.com/articles/using-pull-requests) on the repo if you have questions.
+
+There is an easter egg in this site, find it and I may reveal my 💀 sketches and stories
 
