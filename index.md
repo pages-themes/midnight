@@ -28,7 +28,7 @@ they/them ♦ asexual
 * **🐈‍⬛ GitHub**: `bobbledbobby`
 * **📨 Address** You can meet me IRL at `Planet Earth, Solar System, Milky Way, Observable Universe, Universe`!
 
-## 
+## .
 
 There is an easter egg in this site, find it and I may reveal my 💀 sketches and stories
 
