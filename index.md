@@ -1,4 +1,3 @@
-#
 # ello!
 **stupidest individual alive**
 
@@ -20,6 +19,15 @@ they/them ♦ asexual
 * I like to fork random files from Github and touch a little bit of the repo.
 * I like spotify, and sketching!
 
+## Contact Me! (or don't)
+* **💬 Discord**: `bob.bletea`
+  * DM me if you want to talk!
+  * I administrate servers!
+  * I review servers, DM me your server if you want me to review 'em!
+* **. ͡° ͜ʖ ͡°** **StoryZink** Send me a private, anonymous message: `~`
+* **🐈‍⬛ GitHub**: `bobbledbobby`
+* **📨 Address** You can meet me IRL at `Planet Earth, Solar System, Milky Way, Observable Universe, Universe`!
+
 ## 
 there is an easter egg in this site, find it and I may reveal my 💀 sketches and stories
-#
+
