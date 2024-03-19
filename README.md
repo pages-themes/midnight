@@ -12,3 +12,5 @@ I'm surprised you're even out here checking the repo. Normally no one cares.
 
         ✯ Inspiration: NTTS & Vee's website               
         ✯ Forked from [this](https://github.com/pages-themes/midnight)
+
+  You can create a pull request for any questions!
