@@ -1,5 +1,6 @@
-# ello!
-**stupidest individual alive**
+## ello!
+**stupidest individual alive.**
+
 
 they/them ♦ asexual
 
@@ -16,7 +17,7 @@ they/them ♦ asexual
   * this is a joke pls dont sue me
 
 ## What do I specifically do?
-* I like to fork random files from Github and touch a little bit of the repo.
+* I like to fork random files from Github and touch & add a lil bit of stuff on the forked repo.
 * I like spotify, and sketching!
 
 ## Contact Me! (or don't)
