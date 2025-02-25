@@ -1,0 +1,32 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master  # 监听 'main' 分支的推送
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 环境
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # 克隆代码到工作目录
+
+    - name: Set up Node.js (如果是 Node.js 项目)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # 设置 Node.js 版本
+    
+    - name: Install dependencies
+      run: npm install  # 安装依赖 (根据项目不同调整命令)
+    
+    - name: Build project (如果有构建步骤)
+      run: npm run build  # 构建项目
+    
+    - name: Deploy to server
+      run: |
+        # 将部署脚本添加到此处，假设你有 SSH 权限和服务器上的设置
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} user@server_address 'bash /path/to/deploy_script.sh'
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
