@@ -4,8 +4,6 @@ layout: default
 
 列表
 
-[Link to another page](./another-page.html).
-
 [mdfile](./mdfile.html).
 
 There should be whitespace between paragraphs.
@@ -106,7 +104,7 @@ end
 ### Definition lists can be used with HTML syntax.
 
 <dl>
-<dt>Name</dt>
+<dt>Name qianeric</dt>
 <dd>Godzilla</dd>
 <dt>Born</dt>
 <dd>1952</dd>
