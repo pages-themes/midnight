@@ -6,7 +6,7 @@ layout: default
 
 [Link to another page](./another-page.html).
 
-[Link to new page](./new.html).
+[mdfile](./mdfile.html).
 
 There should be whitespace between paragraphs.
 
