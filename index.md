@@ -2,9 +2,10 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+列表
 
 [Link to another page](./another-page.html).
+
 [Link to new page](./new.html).
 
 There should be whitespace between paragraphs.
