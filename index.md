@@ -2,17 +2,15 @@
 layout: default
 ---
 
+# Hello
+
+您好，欢迎来到我的blog,您可以在这查看我的一些基本信息
+
 列表
 
 [mdfile](./mdfile.html).
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Hello
-
-您好，欢迎来到我的blog,您可以在这查看我的一些基本信息
+敬请期待
 
 ## Header 2
 
