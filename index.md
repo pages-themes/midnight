@@ -19,7 +19,7 @@ layout: default
 
 ### Large image
 
-![Branching](https://github.com/QianEric/qianeric.github.io/png/touxiang.png)
+![Branching](https://github.com/QianEric/qianeric.github.io/tree/master/png/touxiang.png)
 
 <dl>
 <dt>Name</dt>
