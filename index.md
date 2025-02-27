@@ -17,10 +17,6 @@ layout: default
 
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
-### Large image
-
-![Branching](https://github.com/QianEric/qianeric.github.io/tree/master/png/touxiang.png)
-
 <dl>
 <dt>Name</dt>
 <dd>QianEric</dd>
