@@ -12,9 +12,6 @@ layout: default
 
 敬请期待
 
-
-### Small image
-
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
 <dl>
