@@ -1,7 +1,20 @@
 ---
 layout: default
 ---
+
+
+
+{% raw %}
 {{ site.time }}
+{% endraw %}
+{{ site.time }}
+The current time (when you run the `jekyll` command).
+-stdOUT
+```
+{{ site.time }}
+```
+
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
