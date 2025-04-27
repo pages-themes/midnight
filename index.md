@@ -35,7 +35,29 @@ The current time (when you run the `jekyll` command).
 ```
 ---
 
+# PIA26499: AVIRIS-3 Sensor Captures Data on Wildfire Near Mount Vernon, Alabama
+
 ![PIA26499: AVIRIS-3 Sensor Captures Data on Wildfire Near Mount Vernon, Alabama](https://photojournal.jpl.nasa.gov/jpeg/PIA26499.jpg)
+
+NASA's AVIRIS-3 sensor, an airborne imaging spectrometer built and operated by the agency's Jet Propulsion Laboratory in Southern California, captured infrared data on a wildfire about 3 miles (5 kilometers) west of the town of Mount Vernon, Alabama, on March 21, 2025. Within minutes of flying over, real-time maps of the fire were sent via satellite internet to firefighters with the Alabama Forestry Commission, who used it to contain the fire, preventing it from reaching four buildings.
+
+The first image in the series combines reflection data from AVIRIS-3 (Airborne Visible Infrared Imaging Spectrometer 3) at three infrared wavelengths that are invisible to the human eye – 2,350 nanometers, 1,200 nanometers, and 1,000 nanometers. In the resulting composite image, the colors indicate where the fire was burning most intensely. Orange and red areas show cooler-burning areas, while yellow indicates the most intense flames. Burned areas show up as dark red or brown.
+
+The second image in the series looks solely at the 2,400 nanometers wavelength. This wavelength is particularly useful for seeing hot spots and the perimeters of fires, which show brightly against a red background.
+
+The third image in the series combines light at 1,610 nanometers, 850 nanometers, and 550 nanometers. This view shows burn areas and smoke.
+
+The AVIRIS-3 sensor belongs to a line of imaging spectrometers built at JPL since 1986. The instruments have been used to study a wide range of phenomena – including fire – by measuring sunlight reflecting from the planet's surface. Data from imaging spectrometers like AVIRIS-3 typically takes days or weeks to be processed into highly detailed, multilayer image products used for research. By simplifying the calibration algorithms, researchers were able to process data on a computer aboard the plane in a sliver of the time it otherwise would have taken, and airborne satellite internet connectivity enabled the images to be distributed almost immediately, while the plane was still in flight, rather than after it landed.
+
+Flying about 9,000 feet (3,000 meters) in altitude aboard a NASA King Air B200 research plane, AVIRIS-3 collected data on the Castleberry Fire while preparing for prescribed burn experiments that took place in the Geneva State Forest in Alabama on March 28 and at Fort Stewart-Hunter Army Airfield in Georgia from April 14 to 20. The burns were part of a NASA 2025 FireSense Airborne Campaign.
+
+More about AVIRIS-3: https://earth.jpl.nasa.gov/estd-missions/airborne/aviris-3/.
+
+Image Credit:
+NASA/JPL-Caltech, NASA Earth Observatory
+
+Image Addition Date:
+2025-04-23
 
 # site.time
 {% raw %}
