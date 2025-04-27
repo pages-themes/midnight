@@ -2,6 +2,14 @@
 layout: default
 ---
 
+
+
+[using "raw" tag in jekyll to view liquid tags](https://mrprajesh.co.in/blog/raw-tag-jekyll.html) - [https://mrprajesh.co.in/](https://mrprajesh.co.in/)
+
+{% raw %}
+{% include https://thakarashard.github.io/ %}
+{% endraw %}
+
 [Building a reading list with Jekyll data files](https://cagrimmett.com/2019/09/08/reading-list/)
 # site.time
 {% raw %}
