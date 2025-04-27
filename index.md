@@ -25,7 +25,7 @@ The current time (when you run the `jekyll` command).
 ```
 ---
 
-
+![PIA26499: AVIRIS-3 Sensor Captures Data on Wildfire Near Mount Vernon, Alabama](https://photojournal.jpl.nasa.gov/jpeg/PIA26499.jpg)
 
 # site.time
 {% raw %}
