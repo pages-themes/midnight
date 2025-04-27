@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+[Building a reading list with Jekyll data files](https://cagrimmett.com/2019/09/08/reading-list/)
 # site.time
 {% raw %}
 {{ site.time }}
