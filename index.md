@@ -19,6 +19,10 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
  </div>
 
 
+
+
+
+[SRI and CORS errors in <link> tag where they shouldn't be #495](https://github.com/gjtorikian/html-proofer/issues/495)
  ```
 Auto-regeneration: disabled. Use --watch to enable.
 Running ["LinkCheck", "ImageCheck", "HtmlCheck", "ScriptCheck"] on ["./_site"] on *.html... 
@@ -31,7 +35,7 @@ Ran on 2 files!
 HTML-Proofer found 3 failures!
 
  ```
-[SRI and CORS errors in <link> tag where they shouldn't be #495](https://github.com/gjtorikian/html-proofer/issues/495)
+
 [gjtorikian/html-proofer](https://github.com/gjtorikian/html-proofer) is throwing an error on [TwitterEmbeds](https://iframely.com/domains/x-formely-twitter)
 # Broken Build [`job/41368193799`](https://github.com/ricoThaka/programming/actions/runs/14737811427/job/41368193799)
 ## [saas-lang](https://sass-lang.com/documentation/breaking-changes/import/)
