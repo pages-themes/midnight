@@ -2,7 +2,66 @@
 layout: default
 ---
 
+
+# Broken Build [`job/41368193799`](https://github.com/ricoThaka/programming/actions/runs/14737811427/job/41368193799)
+## [saas-lang](https://sass-lang.com/documentation/breaking-changes/import/)
+### Breaking Change: @import and global built-in functions
+Originally, Sass used @import rules to load other files with a single global namespace, with all built-in functions also available globally. We’re deprecating both Sass @import rules and global built-in functions now that the module system (@use and @forward rules) has been available for several years. 
 ## [What are the differences between @use and @forward in SASS? - stackOverflow_dOt_cOm](https://stackoverflow.com/questions/73353442/what-are-the-differences-between-use-and-forward-in-sass)
+
+```
+
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "jekyll-theme-midnight";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+1 │ @import "normalize";
+  │         ^^^^^^^^^^^
+  ╵
+    jekyll-theme-midnight.scss 1:9                                        @import
+    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+2 │ @import "fonts";
+  │         ^^^^^^^
+  ╵
+    jekyll-theme-midnight.scss 2:9                                        @import
+    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
+DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+
+More info and automated migrator: https://sass-lang.com/d/import
+
+  ╷
+3 │ @import "rouge-base16-dark.scss";
+  │         ^^^^^^^^^^^^^^^^^^^^^^^^
+  ╵
+    jekyll-theme-midnight.scss 3:9                                        @import
+    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
+                    done in 0.312 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running ["ScriptCheck", "LinkCheck", "ImageCheck", "HtmlCheck"] on ["./_site"] on *.html... 
+
+
+HTML-Proofer found 2 failures!
+Error: Process completed with exit code 1.
+```
+
+![sass](https://sass-lang.com/assets/img/logos/logo.svg)
+
+---
 
 # DockerHUB
 [RashardMRO](https://hub.docker.com/u/rashardmro?_gl=1*r1leku*_gcl_au*MzQ0NDMxODAxLjE3NDU5NDc1ODM.*_ga*NzE2ODQxNDcuMTc0NTk0NzU4Mw..*_ga_XJWPQMJYHQ*MTc0NTk0NzU4My4xLjEuMTc0NTk0Nzk2My42MC4wLjA.)
