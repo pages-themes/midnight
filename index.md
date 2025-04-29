@@ -20,10 +20,10 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
 
 {% for file in site.static_files %}
   {% if file.path contains 'assets/images/gallery-1' %}
-    <img src="{{ file.path }}" alt="Mars Perseverance Sol 1485">
+    <img src="{{ site.url }}{{ site.baseurl }}/{{ file.path }}" alt="Mars Perseverance Sol 1485">
   {% endif %}
 {% endfor %}
-
+{% {{ site.url }}{{ site.baseurl }} %}
 <div class="tupperware">
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images/gallery-1' %}
