@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-
+# Objects
+Liquid objects represent variables that you can use to build your theme. Object types include store resources, standard Shopify content, and functional elements that help you to build interactivity. [LiQUiD_APi @jekyllrb @shopify](https://shopify.dev/docs/api/liquid/objects/) im working on my programming @nasa @nasa-jpl @whitehouse -#[Rashard](https://thakarashard.github.io/rashardmro/)
 # Writing mathematical expressions
 Use Markdown to display mathematical expressions on GitHub. [GitHubDoc](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 `**The Cauchy-Schwarz Inequality**`\
