@@ -34,7 +34,7 @@ Discover the power of learning by doing with LabEx! An AI-driven platform offeri
     <img src="{{ site.baseurl }}{{ file.path }}" alt="Mars Perseverance Sol 1485">
   {% endif %}
 {% endfor %}
-{% {{ site.url }}{{ site.baseurl }} %}
+
 <div class="tupperware">
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images/gallery-1' %}
