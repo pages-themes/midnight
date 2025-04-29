@@ -3,6 +3,15 @@ layout: default
 ---
 
 
+ <div class="tupperware">
+ {% for image in site.static_files %}
+   {% if image.path contains 'assets/images/gallery-1' %}
+     <img src="{{ image.path }}" alt="Mars Perseverance Sol 1485">
+   {% endif %}
+ {% endfor %}
+ </div>
+
+[gjtorikian/html-proofer](https://github.com/gjtorikian/html-proofer) is throwing an error on [TwitterEmbeds](https://iframely.com/domains/x-formely-twitter)
 # Broken Build [`job/41368193799`](https://github.com/ricoThaka/programming/actions/runs/14737811427/job/41368193799)
 ## [saas-lang](https://sass-lang.com/documentation/breaking-changes/import/)
 ### Breaking Change: @import and global built-in functions
