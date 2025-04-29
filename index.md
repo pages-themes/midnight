@@ -2,6 +2,39 @@
 layout: default
 ---
 
+<div class="box">
+
+  {% for post in site.posts %}
+     
+    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
+  
+     
+  {% endfor %}
+   
+ </div> 
+
+<div class="box">
+
+  {% for page in site.pages %}
+     
+    <a href="{{ page.url | prepend: site.baseurl | replace: '//', '/' }}">{{ page.title }}</a>
+  
+     
+  {% endfor %}
+   
+ </div> 
+
+<div class="tupperware">
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images/gallery-1' %}
+    <img src="{{ image.path }}" alt="">
+  {% endif %}
+{% endfor %}
+</div>
+
+
+
+
 # site.pages
 {% raw %}
 {{ site.pages }}
