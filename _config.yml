@@ -7,7 +7,6 @@ theme: jekyll-theme-midnight
 plugins:
 
 - jekyll-seo-tag
-- jekyll-paginate
 - jekyll-sitemap
 - jekyll-gallery-generator
 baseurl: /
