@@ -17,13 +17,13 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
 ---
 
 
- <div class="tupperware">
+
  {% for file in site.static_files %}
    {% if file.path contains 'assets/images/gallery-1' %}
      <img src="{{ file.path }}" alt="Mars Perseverance Sol 1485">
    {% endif %}
  {% endfor %}
- </div>
+
  <div class="tupperware">
  {% for image in site.static_files %}
    {% if image.path contains 'assets/images/gallery-1' %}
@@ -33,7 +33,7 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
  </div>
 
 
-
+assets/images/gallery-1
 
 
 [SRI and CORS errors in <link> tag where they shouldn't be #495](https://github.com/gjtorikian/html-proofer/issues/495)
