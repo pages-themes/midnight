@@ -10,7 +10,19 @@ layout: default
    {% endif %}
  {% endfor %}
  </div>
+ ```
+Auto-regeneration: disabled. Use --watch to enable.
+Running ["LinkCheck", "ImageCheck", "HtmlCheck", "ScriptCheck"] on ["./_site"] on *.html... 
+Checking 23 external links...
+Ran on 2 files!
+- ./_site/index.html
+  *  SRI and CORS not provided in: https://platform.twitter.com/widgets.js (line 268)
+  *  SRI and CORS not provided in: https://platform.twitter.com/widgets.js (line 358)
+  *  internal image {{ image.path }} does not exist (line 282)
+HTML-Proofer found 3 failures!
 
+ ```
+[SRI and CORS errors in <link> tag where they shouldn't be #495](https://github.com/gjtorikian/html-proofer/issues/495)
 [gjtorikian/html-proofer](https://github.com/gjtorikian/html-proofer) is throwing an error on [TwitterEmbeds](https://iframely.com/domains/x-formely-twitter)
 # Broken Build [`job/41368193799`](https://github.com/ricoThaka/programming/actions/runs/14737811427/job/41368193799)
 ## [saas-lang](https://sass-lang.com/documentation/breaking-changes/import/)
