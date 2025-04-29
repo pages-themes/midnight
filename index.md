@@ -27,7 +27,7 @@ layout: default
 <div class="tupperware">
 {% for image in site.static_files %}
   {% if image.path contains 'assets/images/gallery-1' %}
-    <img src="{{ image.path }}" alt="">
+    <img src="{{ image.path }}" alt="Mars Perseverance Sol 1485">
   {% endif %}
 {% endfor %}
 </div>
