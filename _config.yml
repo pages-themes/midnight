@@ -4,11 +4,6 @@ show_downloads: true
 google_analytics:
 theme: jekyll-theme-midnight
 
-plugins:
-
-- jekyll-seo-tag
-- jekyll-sitemap
-- jekyll-gallery-generator
 baseurl: /
 
 source: .
