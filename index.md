@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+[Kenny Rogers - The Gambler](https://youtu.be/7hx4gdlfamo)
 
   [How to escape `{%` in markdown?](https://talk.jekyllrb.com/t/how-to-escape-in-markdown/4173)
 4LATER [MATH](https://talk.jekyllrb.com/t/jekyll-liquid-problem-with-a-mathjax-expression/7847/2)
