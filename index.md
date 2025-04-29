@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-[New delimiter syntax for inline mathematical expressions - github.cOm_Changelog2023](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/)
+[New delimiter syntax for inline mathematical expressions - github.cOm_Changelog2023](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/) [How to add mathjax support to jekyll](http://webdocs.cs.ualberta.ca/~zichen2/blog/coding/setup/2019/02/17/how-to-add-mathjax-support-to-jekyll.html)
 [Near-Earth Object Surveyor](https://www.jpl.nasa.gov/missions/near-earth-object-surveyor/)
 [Kenny Rogers - The Gambler](https://youtu.be/7hx4gdlfamo)
 
