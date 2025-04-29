@@ -18,19 +18,19 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
 
 
 
- {% for file in site.static_files %}
-   {% if file.path contains 'assets/images/gallery-1' %}
-     <img src="{{ file.path }}" alt="Mars Perseverance Sol 1485">
-   {% endif %}
- {% endfor %}
+{% for file in site.static_files %}
+  {% if file.path contains 'assets/images/gallery-1' %}
+    <img src="{{ file.path }}" alt="Mars Perseverance Sol 1485">
+  {% endif %}
+{% endfor %}
 
- <div class="tupperware">
- {% for image in site.static_files %}
-   {% if image.path contains 'assets/images/gallery-1' %}
-     <img src="{{ image.path }}" alt="Mars Perseverance Sol 1485">
-   {% endif %}
- {% endfor %}
- </div>
+<div class="tupperware">
+{% for image in site.static_files %}
+  {% if image.path contains 'assets/images/gallery-1' %}
+    <img src="{{ image.path }}" alt="Mars Perseverance Sol 1485">
+  {% endif %}
+{% endfor %}
+</div>
 
 
 assets/images/gallery-1
