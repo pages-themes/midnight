@@ -2,6 +2,13 @@
 layout: default
 ---
 
+# Writing mathematical expressions
+Use Markdown to display mathematical expressions on GitHub. [GitHubDoc](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
+**The Cauchy-Schwarz Inequality**\
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
+
+---
 
  <div class="tupperware">
  {% for image in site.static_files %}
@@ -10,6 +17,8 @@ layout: default
    {% endif %}
  {% endfor %}
  </div>
+
+
  ```
 Auto-regeneration: disabled. Use --watch to enable.
 Running ["LinkCheck", "ImageCheck", "HtmlCheck", "ScriptCheck"] on ["./_site"] on *.html... 
