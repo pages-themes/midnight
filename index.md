@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+[New delimiter syntax for inline mathematical expressions - github.cOm_Changelog2023](https://github.blog/changelog/2023-05-08-new-delimiter-syntax-for-inline-mathematical-expressions/)
 [Near-Earth Object Surveyor](https://www.jpl.nasa.gov/missions/near-earth-object-surveyor/)
 [Kenny Rogers - The Gambler](https://youtu.be/7hx4gdlfamo)
 
