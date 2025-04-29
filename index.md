@@ -16,11 +16,22 @@ This expression uses `\$` to display a dollar sign: $`\sqrt{\$4}`$
 ```
 ---
 
+# DockerHUB
+[RashardMRO](https://hub.docker.com/u/rashardmro?_gl=1*r1leku*_gcl_au*MzQ0NDMxODAxLjE3NDU5NDc1ODM.*_ga*NzE2ODQxNDcuMTc0NTk0NzU4Mw..*_ga_XJWPQMJYHQ*MTc0NTk0NzU4My4xLjEuMTc0NTk0Nzk2My42MC4wLjA.)
+## What is a container?
+A container is simply an isolated process with all of the files it needs to run. If you run multiple containers, they all share the same kernel, allowing you to run more applications on less infrastructure. [Containers versus virtual machines (VMs) - docs.docker.com](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W1kWqFkiu7k?si=P2wQvl4O726h9kQ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# [LabEx](https://labex.io/)
+Discover the power of learning by doing with LabEx! An AI-driven platform offering hands-on practice in a virtual environment.
+[#coding](https://x.com/search?q=%23coding&src=hashtag_click) [#learnbydoing](https://x.com/search?q=%23learnbydoing&src=hashtag_click) [#edtech](https://x.com/search?q=%23edtech&src=hashtag_click)
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Create Container - Learn how to create a Docker container from an image using the Docker CLI. This example demonstrates how to run a simple web server in a container. <a href="https://twitter.com/hashtag/Docker?src=hash&amp;ref_src=twsrc%5Etfw">#Docker</a> <a href="https://t.co/959rpfpvPL">https://t.co/959rpfpvPL</a></p>&mdash; LabEx (@WeAreLabEx) <a href="https://twitter.com/WeAreLabEx/status/1916789919399235696?ref_src=twsrc%5Etfw">April 28, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 {% for file in site.static_files %}
   {% if file.path contains 'assets/images/gallery-1' %}
-    <img src="{{ site.url }}{{ site.baseurl }}/{{ file.path }}" alt="Mars Perseverance Sol 1485">
+    <img src="{{ site.url }}{{ site.baseurl }}\/{{ file.path }}" alt="Mars Perseverance Sol 1485">
   {% endif %}
 {% endfor %}
 {% {{ site.url }}{{ site.baseurl }} %}
@@ -72,56 +83,12 @@ DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be remo
 
 More info and automated migrator: https://sass-lang.com/d/import
 
-  ╷
-1 │ @import "normalize";
-  │         ^^^^^^^^^^^
-  ╵
-    jekyll-theme-midnight.scss 1:9                                        @import
-    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
-DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
-
-More info and automated migrator: https://sass-lang.com/d/import
-
-  ╷
-2 │ @import "fonts";
-  │         ^^^^^^^
-  ╵
-    jekyll-theme-midnight.scss 2:9                                        @import
-    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
-DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
-
-More info and automated migrator: https://sass-lang.com/d/import
-
-  ╷
-3 │ @import "rouge-base16-dark.scss";
-  │         ^^^^^^^^^^^^^^^^^^^^^^^^
-  ╵
-    jekyll-theme-midnight.scss 3:9                                        @import
-    /Users/runner/work/programming/programming/assets/css/style.scss 1:9  root stylesheet
-                    done in 0.312 seconds.
- Auto-regeneration: disabled. Use --watch to enable.
-Running ["ScriptCheck", "LinkCheck", "ImageCheck", "HtmlCheck"] on ["./_site"] on *.html... 
-
-
-HTML-Proofer found 2 failures!
-Error: Process completed with exit code 1.
 ```
 
 ![sass](https://sass-lang.com/assets/img/logos/logo.svg)
 
 ---
 
-# DockerHUB
-[RashardMRO](https://hub.docker.com/u/rashardmro?_gl=1*r1leku*_gcl_au*MzQ0NDMxODAxLjE3NDU5NDc1ODM.*_ga*NzE2ODQxNDcuMTc0NTk0NzU4Mw..*_ga_XJWPQMJYHQ*MTc0NTk0NzU4My4xLjEuMTc0NTk0Nzk2My42MC4wLjA.)
-## What is a container?
-A container is simply an isolated process with all of the files it needs to run. If you run multiple containers, they all share the same kernel, allowing you to run more applications on less infrastructure. [Containers versus virtual machines (VMs) - docs.docker.com](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W1kWqFkiu7k?si=P2wQvl4O726h9kQ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-# [LabEx](https://labex.io/)
-Discover the power of learning by doing with LabEx! An AI-driven platform offering hands-on practice in a virtual environment.
-[#coding](https://x.com/search?q=%23coding&src=hashtag_click) [#learnbydoing](https://x.com/search?q=%23learnbydoing&src=hashtag_click) [#edtech](https://x.com/search?q=%23edtech&src=hashtag_click)
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Create Container - Learn how to create a Docker container from an image using the Docker CLI. This example demonstrates how to run a simple web server in a container. <a href="https://twitter.com/hashtag/Docker?src=hash&amp;ref_src=twsrc%5Etfw">#Docker</a> <a href="https://t.co/959rpfpvPL">https://t.co/959rpfpvPL</a></p>&mdash; LabEx (@WeAreLabEx) <a href="https://twitter.com/WeAreLabEx/status/1916789919399235696?ref_src=twsrc%5Etfw">April 28, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
