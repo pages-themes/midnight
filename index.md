@@ -2,6 +2,18 @@
 layout: default
 ---
 
+# site.pages
+{% raw %}
+{{ site.pages }}
+{% endraw %}
+{{ site.pages }}
+The current time (when you run the `jekyll` command).
+-stdOUT
+```
+{{ site.pages }}
+```
+---
+
 [Custom Packages and Files in Binder’s Base Image](https://discourse.jupyter.org/t/custom-packages-and-files-in-binders-base-image/28146) [Use a Dockerfile for your Binder repository](https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html)
 
 [using "raw" tag in jekyll to view liquid tags](https://mrprajesh.co.in/blog/raw-tag-jekyll.html) - [https://mrprajesh.co.in/](https://mrprajesh.co.in/)
