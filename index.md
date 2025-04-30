@@ -9,7 +9,7 @@ $$E=mc^2$$
 [Near-Earth Object Surveyor](https://www.jpl.nasa.gov/missions/near-earth-object-surveyor/)
 [Kenny Rogers - The Gambler](https://youtu.be/7hx4gdlfamo)
 
-  [How to escape `{%` in markdown?](https://talk.jekyllrb.com/t/how-to-escape-in-markdown/4173)
+  [How to escape `{% %}` in markdown?](https://talk.jekyllrb.com/t/how-to-escape-in-markdown/4173)
 4LATER [MATH](https://talk.jekyllrb.com/t/jekyll-liquid-problem-with-a-mathjax-expression/7847/2)
 # Objects
 Liquid objects represent variables that you can use to build your theme. Object types include store resources, standard Shopify content, and functional elements that help you to build interactivity. [LiQUiD_APi @jekyllrb @shopify](https://shopify.dev/docs/api/liquid/objects/) im working on my programming @nasa @nasa-jpl @whitehouse -#[Rashard](https://thakarashard.github.io/rashardmro/)
