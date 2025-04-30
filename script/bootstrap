@@ -4,3 +4,4 @@ set -e
 
 gem install bundler
 bundle install
+gem install sass
